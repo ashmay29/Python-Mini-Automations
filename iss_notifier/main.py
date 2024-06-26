@@ -5,8 +5,8 @@ from datetime import datetime as dt
 MY_LAT = 19.075983
 MY_LONG = 72.877655
 
-MY_EMAIL = ""
-MY_PASS = ""
+MY_EMAIL = "aanshuvishah@gmail.com"
+MY_PASS = "frjrudsgokigcrky"
 
 def is_iss_overhead():
     response = requests.get(url='http://api.open-notify.org/iss-now.json')
@@ -39,4 +39,9 @@ def is_night():
 if is_iss_overhead and is_night:
     with smtplib.SMTP('smtp.gmail.com') as connection:
         connection.starttls()
-        connection.login()
+        connection.login(MY_EMAIL,MY_PASS)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs=MY_EMAIL,
+            msg="Subject:Look above you!\n\n The ISS Satellite is above you!"
+            )
