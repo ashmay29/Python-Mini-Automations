@@ -5,8 +5,8 @@ from datetime import datetime as dt
 MY_LAT = 19.075983
 MY_LONG = 72.877655
 
-MY_EMAIL = "aanshuvishah@gmail.com"
-MY_PASS = "frjrudsgokigcrky"
+MY_EMAIL = " "
+MY_PASS = " "
 
 def is_iss_overhead():
     response = requests.get(url='http://api.open-notify.org/iss-now.json')
