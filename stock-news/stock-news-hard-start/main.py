@@ -23,7 +23,7 @@ stocks_params = {
     "datatype": "json",
 }
 response = requests.get(STOCK_ENDPOINT, params=stocks_params)
-
+response.raise_for_status()
 stock_data = response.json()
 stock_list = list(stock_data["Time Series (Daily)"].items())
 yesterday_close = float(stock_list[0][1]['4. close'])
@@ -39,7 +39,7 @@ if diff_percent > 3:
         "sortBy": "relevancy",
     }
     response = requests.get(NEWS_ENDPOINT, params=news_params)
-
+    response.raise_for_status()
     news_data = response.json()
     news_articles = []
     for i in range(3):
