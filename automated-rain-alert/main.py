@@ -1,10 +1,10 @@
-API_KEY = "0a92dcd7ad2ac7d446332a9d284ac8ea"
+API_KEY = " "
 MY_LAT = 19.075983
 MY_LONG = 72.877655
 API_ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
 
-MY_EMAIL = "aanshuvishah@gmail.com"
-MY_PASS = "bjzl uorj lywb ddrw"
+MY_EMAIL = " "
+MY_PASS = " "
 
 import requests
 import smtplib
